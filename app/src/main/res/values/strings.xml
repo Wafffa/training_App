@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">new</string>
+
+    <string name="direction_title">Direction de l Education de l Etat</string>
+    <string name="departement">Département de la formation et de l inspection</string>
+    <string name="ed_mail">Address émail</string>
+    <string name="ed_password">Mot de passe</string>
+    <string name="login_btn">Se connecter</string>
+    <string name="forgot_tv">Oublié le mot de passe ?</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="havnt_account">Vous n avez pas de compte?</string>
+    <string name="ed_user_name">Nom d utilisateur</string>
+    <string name="ed_phone_number">Numéro de téléphone</string>
+    <string name="ed_rank">rang</string>
+    <string name="ed_confirmPassword">Confirmation mot de passe</string>
+    <string name="signUp_btn">Inscription</string>
+    <string name="hv_account">Avez-vous un compte ?</string>
+    <string name="login">Connexion</string>
+    <string name="required">*Obligatoire</string>
+    <string name="remarque_pass"> 8 lettres, chiffres et symboles</string>
+    <string name="remarque_name">S il vous plait entrez votre nom entier</string>
+    <string name="dialog_msg">Veuillez patienter l enregistrement</string>
+    <string name="Registration">enregistrement</string>
+    <string name="Enter_Connext_Email">Entrez e-mail de connexion</string>
+
+
+</resources>

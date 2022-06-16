@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/splash_screen_icon" />
+
+    <TextView
+        android:id="@+id/direction_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/almarai"
+        android:textAlignment="center"
+        android:text="@string/direction_title"
+        android:textDirection="rtl"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/departement_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/almarai"
+        android:text="@string/departement"
+        android:textAlignment="center"
+        android:textDirection="rtl"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/ed_mail"
+        android:padding="10dp"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/ed"
+        android:hint="@string/ed_mail"
+        android:fontFamily="@font/almarai"/>
+
+      <EditText
+          android:id="@+id/ed_password"
+          android:padding="10dp"
+          android:layout_width="300dp"
+          android:layout_height="55dp"
+          android:layout_gravity="center"
+          android:layout_margin="10dp"
+          android:layout_marginStart="10dp"
+          android:background="@drawable/ed"
+          android:hint="@string/ed_password"
+          android:fontFamily="@font/almarai"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="200dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@drawable/blue_rectangle"
+        android:backgroundTint="#3B5998"
+        android:text="@string/login_btn"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:fontFamily="@font/almarai"/>
+
+    <TextView
+        android:id="@+id/forgot_tv"
+        android:onClick="forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/forgot_tv"
+        android:textColor="@color/blue"
+        android:fontFamily="@font/almarai"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="_____________________"
+        android:textColor="@color/blue" />
+        <TextView
+            android:id="@+id/create_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/create_account"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:onClick="create_tv"
+            android:fontFamily="@font/almarai"/>
+        <TextView
+            android:id="@+id/havnt_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/havnt_account"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/almarai"/>
+</LinearLayout>

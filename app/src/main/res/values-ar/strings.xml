@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">new</string>
+
+    <string name="direction_title">مديرية التربية لولاية الجلفة</string>
+    <string name="departement">مصلحة التكوين والتفتيش</string>
+    <string name="ed_mail">البريد الإلكتروني</string>
+    <string name="ed_password">كلمة السر</string>
+    <string name="login_btn">تسجيل الدخول</string>
+    <string name="forgot_tv">نسيت كلمة السر </string>
+    <string name="create_account">إنشاء حساب</string>
+    <string name="havnt_account">لا تملك حسابا ؟</string>
+    <string name="ed_user_name">اسم المستخدم</string>
+    <string name="ed_phone_number">رقم الهاتف </string>
+    <string name="ed_rank">الرتبة</string>
+    <string name="ed_confirmPassword">تأكيد كلمة السر</string>
+    <string name="signUp_btn">إنشاء حساب </string>
+    <string name="hv_account">هل تملك حسابا ؟</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="required">* مطلوب</string>
+    <string name="remarque_pass">8 من الأحرف والأرقام والرموز </string>
+    <string name="remarque_name">الرجاء إدخال اسمك الكامل </string>
+    <string name="dialog_msg">من فضلك انتظر التحميل </string>
+    <string name="Registration">التسجيل</string>
+    <string name="Enter_Connext_Email">أدخل عنوان بريد إلكتروني صحيح</string>
+
+</resources>

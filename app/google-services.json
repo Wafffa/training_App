@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "961319952139",
+    "project_id": "education-directorate-app",
+    "storage_bucket": "education-directorate-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961319952139:android:d8a443eb3ee0d0b8378c0e",
+        "android_client_info": {
+          "package_name": "com.example.anew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961319952139-3f02k4dtq82ba0s2s89bqpkaa49jb0rm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHiUAnInoGNKAvvU1rBup8p7slTFm77MA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961319952139-3f02k4dtq82ba0s2s89bqpkaa49jb0rm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
