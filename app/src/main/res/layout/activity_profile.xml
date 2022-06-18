@@ -101,7 +101,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="#5cc09f">
+            android:background="@color/violet">
+           <!--android:background="#5cc09f"-->
 
             <ImageView
                 android:id="@+id/imageView_profile"

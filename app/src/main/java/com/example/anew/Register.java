@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Register extends AppCompatActivity {
     EditText ed_mail , ed_password , ed_confirmPassword ,ed_user_name ,  ed_phone_number , ed_rank;
@@ -30,6 +31,8 @@ public class Register extends AppCompatActivity {
     FirebaseUser mUser;
     FirebaseDatabase database;
     DatabaseReference users;
+    FirebaseFirestore ref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +76,7 @@ public class Register extends AppCompatActivity {
         }else if(rank.isEmpty() ){
             ed_rank.setError("Entrez votre niveau ");
         }else if(password.isEmpty() || password.length()<6){
-            ed_password.setError("Entrez un mot de passe correct");
+            ed_password.setError("Entrez un mot de passe correct  6 caractères requis");
         }else if(!password.equals(confirmPassword)){
             ed_confirmPassword.setError("Le champ Mot de passe ne correspond pas aux deux");
         }else {
@@ -88,24 +91,30 @@ public class Register extends AppCompatActivity {
             newUser.setNiveau(rank);
             newUser.setEmail(email);
 
-            users.push().setValue(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void unused) {
-                    ed_user_name.setText("");
-                    ed_mail.setText("");
-                    ed_phone_number.setText("");
-                    ed_rank.setText("");
-                    Toast.makeText(Register.this, "Données utilisateur enregistrées", Toast.LENGTH_SHORT).show();
-                }
-            });
+//            users.push().setValue(newUser).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                @Override
+//                public void onSuccess(Void unused) {
+//                    ed_user_name.setText("");
+//                    ed_mail.setText("");
+//                    ed_phone_number.setText("");
+//                    ed_rank.setText("");
+//                    Toast.makeText(Register.this, "Données utilisateur enregistrées", Toast.LENGTH_SHORT).show();
+//                }
+//            });
 
-
+            Firestore_db firestore = new Firestore_db();
             mAuth.createUserWithEmailAndPassword(email , password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
+
                         progressDialog.dismiss();
-                        sendUserToNextActivity();
+                        String result = firestore.setUserTodb(newUser,task.getResult().getAdditionalUserInfo().getProviderId());
+                        if (result == "success") {
+                            sendUserToNextActivity();
+                        } else {
+                            Toast.makeText(Register.this, "faillure to register", Toast.LENGTH_SHORT).show();
+                        }
                         Toast.makeText(Register.this,"Inscription réussie", Toast.LENGTH_SHORT).show();
                     }else{
                         progressDialog.dismiss();
@@ -118,6 +127,7 @@ public class Register extends AppCompatActivity {
 
         }
     }
+
 
     private void sendUserToNextActivity() {
         Intent intent = new Intent(Register.this,Home.class);

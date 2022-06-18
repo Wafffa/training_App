@@ -13,4 +13,8 @@
     <color name="gray_borders">#5C656A</color>
     <color name="red">#9F4747</color>
     <color name="red_slack">#E01E5A</color>
+    <color name="violet">#9a9ce9</color>
+    <color name="violet_2">#a2b9ed</color>
+    <color name="violet_3">#a3cdef</color>
+    <color name="violet_4">#aeede2</color>
 </resources>
